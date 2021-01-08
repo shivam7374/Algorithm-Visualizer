@@ -2,6 +2,7 @@ var random_array=document.getElementById('radom_array');
 var array_generated=document.getElementById("array");
 
 var i=0, j=0;
+
 var globinterval;
 
 function bubbleSort()  
