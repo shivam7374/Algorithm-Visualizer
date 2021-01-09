@@ -35,6 +35,8 @@ function bubbleSort()
     }
     if(i==n-1)
     {
+        var elements = document.getElementById('array').children; 
+        elements[0].style.backgroundColor ="aquamarine"
         end = window.performance.now();
         console.log(`Execution time: ${end - start} ms`);
         // console.log("BOSS");
@@ -58,8 +60,8 @@ function insertionSort()
     var element1=elements[j].style;
     var element2=elements[j+1].style;
     var val1=parseInt(element1.height);
-    element1.backgroundColor ="red";
-    element2.backgroundColor ="red";
+    // element1.backgroundColor ="red";
+    // element2.backgroundColor ="red";
 
     if (val1 > key_insertion)
     {
@@ -80,6 +82,7 @@ function insertionSort()
         }
         else{
             key_insertion=parseInt(elements[i].style.height);
+            elements[i].style.backgroundColor="purple";
             j=i-1;
             element2.backgroundColor ="aquamarine";
         }
@@ -92,13 +95,14 @@ function insertion_sortonclick()
     i=1,j=0;
     var elements = document.getElementById('array').children; 
     key_insertion=parseInt(elements[i].style.height);
+    elements[i].style.backgroundColor="purple";
     var startinterval=setInterval(insertionSort, 1000);
     globinterval=startinterval;
 }
 
 function random_array_generator(){
     array_generated.innerHTML="";
-    for(var k=0;k<4;k++)
+    for(var k=0;k<14;k++)
     {
         var val=randomIntFromInterval(10,100);
         var node = document.createElement("div");
