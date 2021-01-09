@@ -2,7 +2,7 @@ var random_array=document.getElementById('radom_array');
 var array_generated=document.getElementById("array");
 
 var i=0, j=0;
-
+var start,end;
 var globinterval;
 
 function bubbleSort()  
@@ -35,13 +35,16 @@ function bubbleSort()
     }
     if(i==n-1)
     {
-        console.log("BOSS");
+        end = window.performance.now();
+        console.log(`Execution time: ${end - start} ms`);
+        // console.log("BOSS");
         clearInterval(globinterval);
     }
 }  
 
 function bubble_sortonclick()
 {
+    start = window.performance.now();
     i=0,j=0;
     var startinterval=setInterval(bubbleSort, 1000);
     globinterval=startinterval;
@@ -70,17 +73,22 @@ function insertionSort()
         i++;
         if(i==n)
         {
-            console.log("BOSS");
+            end = window.performance.now();
+            console.log(`Execution time: ${end - start} ms`);
+            // console.log("BOSS");
             clearInterval(globinterval);
         }
-        key_insertion=parseInt(elements[i].style.height);
-        j=i-1;
-        element2.backgroundColor ="aquamarine";
+        else{
+            key_insertion=parseInt(elements[i].style.height);
+            j=i-1;
+            element2.backgroundColor ="aquamarine";
+        }
     }
 } 
 
 function insertion_sortonclick()
 {
+    start = window.performance.now();
     i=1,j=0;
     var elements = document.getElementById('array').children; 
     key_insertion=parseInt(elements[i].style.height);
