@@ -40,27 +40,57 @@ function bubbleSort()
     }
 }  
 
-function color_change()
+function bubble_sortonclick()
 {
-    var elements = document.getElementById('array').children;
-    var element1=elements[j].style;
-    var element2=elements[j+1].style;
-    // element1.backgroundColor ="aquamarine";
-    element2.backgroundColor ="aquamarine";
+    i=0,j=0;
+    var startinterval=setInterval(bubbleSort, 1000);
+    globinterval=startinterval;
 }
 
-function callonclick()
-{
-    if(i==0)
+var key_insertion;
+function insertionSort()  
+{  
+    var elements = document.getElementById('array').children; 
+    var n=elements.length; 
+    var element1=elements[j].style;
+    var element2=elements[j+1].style;
+    var val1=parseInt(element1.height);
+    element1.backgroundColor ="red";
+    element2.backgroundColor ="red";
+
+    if (val1 > key_insertion)
     {
-        var startinterval=setInterval(bubbleSort, 1000);
-        globinterval=startinterval;
+        element2.backgroundColor ="orange";
+        element2.height=val1+"px";
+        j--;
     }
+    if(j==-1 || val1 <= key_insertion){
+        j++;
+        elements[j].style.height=key_insertion+"px";
+        i++;
+        if(i==n)
+        {
+            console.log("BOSS");
+            clearInterval(globinterval);
+        }
+        key_insertion=parseInt(elements[i].style.height);
+        j=i-1;
+        element2.backgroundColor ="aquamarine";
+    }
+} 
+
+function insertion_sortonclick()
+{
+    i=1,j=0;
+    var elements = document.getElementById('array').children; 
+    key_insertion=parseInt(elements[i].style.height);
+    var startinterval=setInterval(insertionSort, 1000);
+    globinterval=startinterval;
 }
 
 function random_array_generator(){
     array_generated.innerHTML="";
-    for(var k=0;k<16;k++)
+    for(var k=0;k<4;k++)
     {
         var val=randomIntFromInterval(10,100);
         var node = document.createElement("div");
@@ -86,4 +116,13 @@ function waitSeconds(iMilliSeconds) {
         end = new Date().getTime();
         counter = end - start;
     }
+}
+
+function color_change()
+{
+    var elements = document.getElementById('array').children;
+    var element1=elements[j].style;
+    var element2=elements[j+1].style;
+    // element1.backgroundColor ="aquamarine";
+    element2.backgroundColor ="aquamarine";
 }
