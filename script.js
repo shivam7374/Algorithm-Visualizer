@@ -8,7 +8,7 @@ var start,end;
 var globinterval;
 var global_merge1_interval;
 var temp; 
-
+var flag=0;
 function merge()
 {
     
@@ -20,8 +20,6 @@ function merge()
         var element2=elements[mj].style;
         var val1=parseInt(element1.height);
         var val2=parseInt(element2.height);
-        element1.backgroundColor ="red";
-        element2.backgroundColor ="red";
         
         console.log("Val1",val1,val2);
         if (val1 < val2)
@@ -40,12 +38,12 @@ function merge()
     // Copy remaining elements
     while (mi < n && mi <= mid)
     {
-        var element1=elements[mi].style;
+        var element1=elements[mi].style;  
         var val1=parseInt(element1.height);
         temp[mk++] = val1;
         mi++;
     }
-        
+    
  
     // Don't need to copy second half
     console.log(temp);
@@ -54,6 +52,21 @@ function merge()
     {   
         var element1=elements[mi].style;
         element1.height=temp[mi]+"px";
+        // element1.backgroundColor ="aquamarine";
+        if(flag==0)
+        {
+            element1.backgroundColor ="red";
+        }
+        else{
+            element1.backgroundColor ="orange";
+        }
+    }
+    if(flag==0)
+    {
+        flag=1;
+    }
+    else{
+        flag=0;
     }
 }
 
@@ -90,6 +103,11 @@ function mergeSort()
         i=0;
     // // element1.backgroundColor ="aquamarine";
     // element2.backgroundColor ="aquamarine";
+    // for (var z = 0; z <n; z++)
+    // {   
+    //     var element1=elements[z].style;
+    //     element1.backgroundColor ="orange";
+    // }
     }
     if(m>=n)
     {
