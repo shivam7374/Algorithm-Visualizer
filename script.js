@@ -1,9 +1,119 @@
 var random_array=document.getElementById('radom_array');
 var array_generated=document.getElementById("array");
 
-var i=0, j=0;
+var i=0, j=0,m=0;
+var from,mid,to;
+var mi,mj,mk;
 var start,end;
 var globinterval;
+var global_merge1_interval;
+var temp; 
+
+function merge()
+{
+    
+    var elements = document.getElementById('array').children; 
+    var n=elements.length; 
+    while (mi <= mid && mj <= to)
+    {
+        var element1=elements[mi].style;
+        var element2=elements[mj].style;
+        var val1=parseInt(element1.height);
+        var val2=parseInt(element2.height);
+        element1.backgroundColor ="red";
+        element2.backgroundColor ="red";
+        
+        console.log("Val1",val1,val2);
+        if (val1 < val2)
+        {
+            console.log("Val1",val1,val2);
+            temp[mk++] = val1;
+            mi++;
+        }
+        else
+            {
+                temp[mk++] = val2;
+                mj++;
+            }
+    }
+ 
+    // Copy remaining elements
+    while (mi < n && mi <= mid)
+    {
+        var element1=elements[mi].style;
+        var val1=parseInt(element1.height);
+        temp[mk++] = val1;
+        mi++;
+    }
+        
+ 
+    // Don't need to copy second half
+    console.log(temp);
+    // copy back to the original array to reflect sorted order
+    for (mi = from; mi <= to; mi++)
+    {   
+        var element1=elements[mi].style;
+        element1.height=temp[mi]+"px";
+    }
+}
+
+
+function mergeSort()  
+{  
+    
+    var elements = document.getElementById('array').children; 
+    var n=elements.length; 
+    // var element1=elements[j].style;
+    // var element2=elements[j+1].style;
+    // var val1=parseInt(element1.height);
+    // var val2=parseInt(element2.height);
+    // element1.backgroundColor ="red";
+    // element2.backgroundColor ="red";
+
+    from = i;
+    mid = i + m - 1;
+    to = Math.min(i + 2*m - 1, n-1);
+     
+    mk = from;
+    mi = from; 
+    mj = mid + 1;
+    console.log(from,mid,to);
+    console.log(mk,mi,mj);
+    merge();
+    // var startinterval=setInterval(merge1, 10);
+    // global_merge1_interval=startinterval;
+
+    i+=(2*m);
+    if(i>=(n-1))
+    {
+        m=m*2;
+        i=0;
+    // // element1.backgroundColor ="aquamarine";
+    // element2.backgroundColor ="aquamarine";
+    }
+    if(m>=n)
+    {
+        // var elements = document.getElementById('array').children; 
+        // elements[0].style.backgroundColor ="aquamarine"
+        end = window.performance.now();
+        console.log(`Execution time: ${end - start} ms`);
+        // console.log("BOSS");
+        clearInterval(globinterval);
+    }
+}  
+
+function merge_sortonclick()
+{
+    start = window.performance.now();
+    i=0,m=1;
+    var elements = document.getElementById('array').children; 
+    var n=elements.length; 
+    var myArray = new Array(n);
+    temp=myArray;
+    var startinterval=setInterval(mergeSort, 1000);
+    globinterval=startinterval;
+}
+
 
 function bubbleSort()  
 {  
@@ -155,9 +265,10 @@ function selection_sortonclick()
     globinterval=startinterval;
 }
 
+
 function random_array_generator(){
     array_generated.innerHTML="";
-    for(var k=0;k<4;k++)
+    for(var k=0;k<16;k++)
     {
         var val=randomIntFromInterval(10,100);
         var node = document.createElement("div");
