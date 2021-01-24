@@ -1,35 +1,108 @@
-void merge(int A[], int temp[], int from, int mid, int to)
-{
-	int k = from, i = from, j = mid + 1;
+var from,mid,to;
+var mi,mj,mk;
+var global_merge1_interval;
+var temp; 
+var flag=0;
 
-	// loop till there are elements in the left and right runs
-	while (i <= mid && j <= to)
-	{
-		if (A[i] < A[j])
-			temp[k++] = A[i++];
-		else
-			temp[k++] = A[j++];
-	}
+function merge()
+{
+    
+    var elements = document.getElementById('array').children; 
+    var n=elements.length; 
+    while (mi <= mid && mj <= to)
+    {
+        var element1=elements[mi].style;
+        var element2=elements[mj].style;
+        var val1=parseInt(element1.height);
+        var val2=parseInt(element2.height);
+        
+        console.log("Val1",val1,val2);
+        if (val1 < val2)
+        {
+            console.log("Val1",val1,val2);
+            temp[mk++] = val1;
+            mi++;
+        }
+        else
+            {
+                temp[mk++] = val2;
+                mj++;
+            }
+    }
+ 
+    while (mi < n && mi <= mid)
+    {
+        var element1=elements[mi].style;  
+        var val1=parseInt(element1.height);
+        temp[mk++] = val1;
+        mi++;
+    }
+    
+ 
+    console.log(temp);
+    
+    for (mi = from; mi <= to; mi++)
+    {   
+        var element1=elements[mi].style;
+        element1.height=temp[mi]+"px";
+        // element1.backgroundColor ="aquamarine";
+        if(flag==0)
+        {
+            element1.backgroundColor ="red";
+        }
+        else{
+            element1.backgroundColor ="orange";
+        }
+    }
+    if(flag==0)
+    {
+        flag=1;
+    }
+    else{
+        flag=0;
+    }
 }
 
-// Iteratively sort array A[0..n-1] using temporary array
-void mergesort(int A[], int temp[], int 0, int n-1)
-{
-	// divide the array into blocks of size m
-	// m = [1, 2, 4, 8, 16...]
-	for (int m = 1; m <= n-1; m = 2*m)
-	{
-		// for m = 1, i = 0, 2, 4, 6, 8
-		// for m = 2, i = 0, 4, 8
-		// for m = 4, i = 0, 8
-		// ...
-		for (int i = 0; i < n-1; i += 2*m)
-		{
-			int from = i;
-			int mid = i + m - 1;
-			int to = min(i + 2*m - 1, n-1);
 
-			merge(A, temp, from, mid, to);
-		}
-	}
+function mergeSort()  
+{  
+    
+    var elements = document.getElementById('array').children; 
+    var n=elements.length; 
+
+    from = i;
+    mid = i + m - 1;
+    to = Math.min(i + 2*m - 1, n-1);
+     
+    mk = from;
+    mi = from; 
+    mj = mid + 1;
+    console.log(from,mid,to);
+    console.log(mk,mi,mj);
+    merge();
+
+    i+=(2*m);
+    if(i>=(n-1))
+    {
+        m=m*2;
+        i=0;
+    }
+    if(m>=n)
+    {
+        end = window.performance.now();
+        console.log(`Execution time: ${end - start} ms`);
+        clearInterval(globinterval);
+    }
+}  
+
+function merge_sortonclick()
+{
+    start = window.performance.now();
+    i=0,m=1;
+    var elements = document.getElementById('array').children; 
+    var n=elements.length; 
+    var myArray = new Array(n);
+    temp=myArray;
+    var startinterval=setInterval(mergeSort, 1000);
+    globinterval=startinterval;
 }
