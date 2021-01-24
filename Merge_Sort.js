@@ -16,10 +16,10 @@ function merge()
         var val1=parseInt(element1.height);
         var val2=parseInt(element2.height);
         
-        console.log("Val1",val1,val2);
+        // console.log("Val1",val1,val2);
         if (val1 < val2)
         {
-            console.log("Val1",val1,val2);
+            // console.log("Val1",val1,val2);
             temp[mk++] = val1;
             mi++;
         }
@@ -39,7 +39,7 @@ function merge()
     }
     
  
-    console.log(temp);
+    // console.log(temp);
     
     for (mi = from; mi <= to; mi++)
     {   
@@ -77,8 +77,8 @@ function mergeSort()
     mk = from;
     mi = from; 
     mj = mid + 1;
-    console.log(from,mid,to);
-    console.log(mk,mi,mj);
+    // console.log(from,mid,to);
+    // console.log(mk,mi,mj);
     merge();
 
     i+=(2*m);
