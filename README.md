@@ -1,8 +1,18 @@
-# Algorithm-Visualizer
+# Algorithm Visualizer
 
-Future Aspects which can be covered
-1) CSS Flexbox animations like 
-https://www.linkedin.com/posts/akshaymarch7_css-flexbox-ugcPost-6758996799324737536-48XR
+"Algorithm Visualizer" is a project that would help us to visualize and understand the sorting algorithms. This project consists of a very simple user interface, which allows users to select the sort algorithm.
 
-2) Code input user then show working with animation
-3) Fantastic UI/UX Desgining
+## Sorting Algorithms
+
+- Bubble Sort
+- Insertion Sort
+- Selection Sort
+- Merge Sort
+
+## Future Aspects which can be covered
+
+- CSS Flexbox animations like  
+   https://www.linkedin.com/posts/akshaymarch7_css-flexbox-ugcPost-6758996799324737536-48XR
+
+- Code input user then show working with animation
+- Fantastic UI/UX Desgining
