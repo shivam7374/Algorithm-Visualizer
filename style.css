@@ -1,3 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .bar_view {
   width: 3px;
   /* height: 50px; */
@@ -9,4 +15,18 @@
 
 #array {
   justify-content: space-evenly;
+}
+.input_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input_container  div {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  margin: 5px;
 }

@@ -11,11 +11,19 @@
     <center>
         <h1>ALGORITHM VISUALIZER</h1>
     </center>
-    <button id="random_array" onclick="random_array_generator()">Generate Array</button>
-    <button onclick="bubble_sortonclick()">Bubble Sort</button>
-    <button onclick="insertion_sortonclick()">Insertion Sort</button>
-    <button onclick="selection_sortonclick()">Selection Sort</button>
-    <button onclick="merge_sortonclick()">Merge Sort</button>
+    <div class="input_container">
+        <input type="number" name="arraySizeInput" id="arraySizeInput" placeholder="Array Size"/>
+        <button id="array_generator" onclick="array_generator()">Generate Array</button>
+        <div>
+            <button id="random_array" onclick="random_array_generator()">Generate Random Array</button>
+            <button onclick="bubble_sortonclick()">Bubble Sort</button>
+            <button onclick="insertion_sortonclick()">Insertion Sort</button>
+            <button onclick="selection_sortonclick()">Selection Sort</button>
+            <button onclick="merge_sortonclick()">Merge Sort</button>
+        </div>
+    </div>
+    
+    
     <center><div id="array"></div></center>
 </body>
 <script src="script.js"></script>
