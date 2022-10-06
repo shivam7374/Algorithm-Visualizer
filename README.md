@@ -1,6 +1,6 @@
 # Algorithm Visualizer
 
-"Algorithm Visualizer" is a software to visualize and understand the sorting algorithms. This project consists of a very simple user interface, which allows users to select the sort algorithm.
+"Algorithm Visualizer" is a project that would help us to visualize and understand the sorting algorithms. This project consists of a very simple user interface, which allows users to select the sort algorithm.
 
 ## Sorting Algorithms
 
