@@ -3,11 +3,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: mistyrose;
 }
 .bar_view {
   width: 3px;
   /* height: 50px; */
-  background-color: aquamarine;
+  background-color: blueviolet;
   align-items: flex-end;
   display: inline-block;
   margin: 2px;
@@ -22,11 +23,28 @@ body {
   align-items: center;
   justify-content: center;
 }
-.input_container  div {
+.input_container div {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
 }
 
+.makecol div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+label {
+  margin: 2px;
+}
+input {
+  margin: 2px;
+}
 button {
   margin: 5px;
+  background-color: green;
+  color: white;
 }
