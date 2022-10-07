@@ -11,22 +11,29 @@
       <h1>ALGORITHM VISUALIZER</h1>
     </center>
     <div class="input_container">
-      <label for="arraySizeInput">Enter Size of array</label>
+      <h4>Generate The Array</h4>
+      <label for="arraySizeInput">random array of given length</label>
       <input
         type="number"
         name="arraySizeInput"
         id="arraySizeInput"
         placeholder="Array Size"
       />
-      <label for="arrvalues">Enter Array Values</label>
-      <input placeholder="give space btw numbers" type="text" id="arrvalues" />
-      <button id="array_generator" onclick="array_generator()">
+      <button id="array_generator" onclick="array_generator_random()">
         Generate Array
       </button>
+
+      <label for="arrvalues">array of entered Values</label>
+      <input placeholder="give space btw numbers" type="text" id="arrvalues" />
+      <button id="array_generator" onclick="array_generator_elements()">
+        Generate Array
+      </button>
+      <label for="random_array">random array of random length</label>
+      <button id="random_array" onclick="random_array_generator()">
+        Generate Array
+      </button>
+      <h4>Selection sorting algorithm for visualization</h4>
       <div>
-        <button id="random_array" onclick="random_array_generator()">
-          Generate Random Array
-        </button>
         <button onclick="bubble_sortonclick()">Bubble Sort</button>
         <button onclick="insertion_sortonclick()">Insertion Sort</button>
         <button onclick="selection_sortonclick()">Selection Sort</button>
