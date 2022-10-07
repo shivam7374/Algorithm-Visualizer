@@ -1,9 +1,9 @@
 # Algorithm Visualizer
 
-[![GitHub issues](https://img.shields.io/github/issues/poojasharma097/Algorithm-Visualizer)](https://github.com/poojasharma097/Algorithm-Visualizer/issues)
-[![GitHub forks](https://img.shields.io/github/forks/poojasharma097/Algorithm-Visualizer)](https://github.com/poojasharma097/Algorithm-Visualizer/network)
-[![GitHub stars](https://img.shields.io/github/stars/poojasharma097/Algorithm-Visualizer)](https://github.com/poojasharma097/Algorithm-Visualizer/stargazers)
-[![GitHub license](https://img.shields.io/github/license/poojasharma097/Algorithm-Visualizer)](https://github.com/poojasharma097/Algorithm-Visualizer)
+[![GitHub issues](https://img.shields.io/github/issues/shivam7374/Algorithm-Visualizer)](https://github.com/shivam7374/Algorithm-Visualizer/issues)
+[![GitHub forks](https://img.shields.io/github/forks/shivam7374/Algorithm-Visualizer)](https://github.com/shivam7374/Algorithm-Visualizer/network)
+[![GitHub stars](https://img.shields.io/github/stars/shivam7374/Algorithm-Visualizer)](https://github.com/shivam7374/Algorithm-Visualizer/stargazers)
+[![GitHub license](https://img.shields.io/github/license/shivam7374/Algorithm-Visualizer)](https://github.com/shivam7374/Algorithm-Visualizer)
 
 ## Overview 
 
@@ -81,5 +81,7 @@ https://www.linkedin.com/posts/akshaymarch7_css-flexbox-ugcPost-6758996799324737
 
 - [Shivam](https://github.com/shivam7374)
 - [Umair Ayub](https://github.com/umairayub79)
+- [Pooja Sharma](https://github.com/poojasharma097)
+
 
 ## Thank you :smiley:
