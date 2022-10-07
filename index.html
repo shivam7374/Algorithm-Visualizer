@@ -11,8 +11,14 @@
       <h1>ALGORITHM VISUALIZER</h1>
     </center>
     <div class="input_container">
-      <h2>Enter Array Values</h2>
-
+      <label for="arraySizeInput">Enter Size of array</label>
+      <input
+        type="number"
+        name="arraySizeInput"
+        id="arraySizeInput"
+        placeholder="Array Size"
+      />
+      <label for="arrvalues">Enter Array Values</label>
       <input placeholder="give space btw numbers" type="text" id="arrvalues" />
       <button id="array_generator" onclick="array_generator()">
         Generate Array

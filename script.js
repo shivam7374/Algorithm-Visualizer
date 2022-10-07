@@ -27,11 +27,13 @@ function random_array_generator() {
 function array_generator() {
   let arrayValues = document.getElementById("arrvalues").value;
   let splittedValues = arrayValues.split(" ");
-  let array_size = splittedValues.length || 10;
+  let array_size = array_size_input.value || 10;
   array_generated.innerHTML = "";
   for (var k = 0; k < array_size; k++) {
     // var val = randomIntFromInterval(10, 100);
-    var val = splittedValues[k] * 5;
+    var val;
+    if (splittedValues.length == array_size) val = splittedValues[k] * 5;
+    else val = randomIntFromInterval(10, 100);
     var node = document.createElement("div");
     node.setAttribute("class", "bar_view");
     node.style.height = val * 4 + "px";
@@ -41,6 +43,12 @@ function array_generator() {
   }
   i = 0;
   j = 0;
+  if (splittedValues.length != array_size) {
+    alert(
+      "Size of array not matched with number of elements entered So generating random array of size " +
+        array_size
+    );
+  }
 }
 function randomIntFromInterval(min, max) {
   // min and max included
