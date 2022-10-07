@@ -12,26 +12,40 @@
     </center>
     <div class="input_container">
       <h4>Generate The Array</h4>
-      <label for="arraySizeInput">random array of given length</label>
-      <input
-        type="number"
-        name="arraySizeInput"
-        id="arraySizeInput"
-        placeholder="Array Size"
-      />
-      <button id="array_generator" onclick="array_generator_random()">
-        Generate Array
-      </button>
+      <div class="makecol">
+        <div>
+          <label for="arraySizeInput">random array of given length</label>
+          <input
+            type="number"
+            name="arraySizeInput"
+            id="arraySizeInput"
+            placeholder="Array Size"
+          />
+          <button id="array_generator" onclick="array_generator_random()">
+            Generate Array
+          </button>
+        </div>
 
-      <label for="arrvalues">array of entered Values</label>
-      <input placeholder="give space btw numbers" type="text" id="arrvalues" />
-      <button id="array_generator" onclick="array_generator_elements()">
-        Generate Array
-      </button>
-      <label for="random_array">random array of random length</label>
-      <button id="random_array" onclick="random_array_generator()">
-        Generate Array
-      </button>
+        <div>
+          <label for="arrvalues">array of entered values</label>
+          <input
+            placeholder="give space btw numbers"
+            type="text"
+            id="arrvalues"
+          />
+          <button id="array_generator" onclick="array_generator_elements()">
+            Generate Array
+          </button>
+        </div>
+
+        <div>
+          <label for="random_array">random array of random length</label>
+          <br />
+          <button id="random_array" onclick="random_array_generator()">
+            Generate Array
+          </button>
+        </div>
+      </div>
       <h4>Select sorting algorithm for visualization</h4>
       <div>
         <button onclick="bubble_sortonclick()">Bubble Sort</button>
