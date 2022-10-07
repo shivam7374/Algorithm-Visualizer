@@ -5,7 +5,7 @@
   <a href="">[![GitHub issues](https://img.shields.io/github/issues/shivam7374/Algorithm-Visualizer)](https://github.com/shivam7374/Algorithm-Visualizer/issues)</a>
   <a href="">[![GitHub forks](https://img.shields.io/github/forks/shivam7374/Algorithm-Visualizer)](https://github.com/shivam7374/Algorithm-Visualizer/network)
   <a href="">[![GitHub stars](https://img.shields.io/github/stars/shivam7374/Algorithm-Visualizer)](https://github.com/shivam7374/Algorithm-Visualizer/stargazers)
-  <a href="">[![GitHub license](https://img.shields.io/github/license/poojasharma097/Algorithm-Visualizer)](https://github.com/poojasharma097/Algorithm-Visualizer/blob/master/LICENSE.md)
+  <a href="">[![GitHub license](https://img.shields.io/github/license/shivam7374/Algorithm-Visualizer)](https://github.com/shivam7374/Algorithm-Visualizer/blob/master/LICENSE.md)
   
 </div>
 
