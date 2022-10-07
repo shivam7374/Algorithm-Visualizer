@@ -1,4 +1,4 @@
-# Algorithm-Visualizer
+# Algorithm Visualizer
 
 [![GitHub issues](https://img.shields.io/github/issues/poojasharma097/Algorithm-Visualizer)](https://github.com/poojasharma097/Algorithm-Visualizer/issues)
 [![GitHub forks](https://img.shields.io/github/forks/poojasharma097/Algorithm-Visualizer)](https://github.com/poojasharma097/Algorithm-Visualizer/network)
@@ -7,6 +7,7 @@
 
 ## Overview 
 
+"Algorithm Visualizer" is a project that would help us to visualize and understand the sorting algorithms. This project consists of a very simple user interface, which allows users to select the sort algorithm.
 This is a algorithm visualizer which is made with the purpose to help understand the steps of different algorithms.
 
 ## Tech Stack
