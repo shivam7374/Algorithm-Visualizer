@@ -77,11 +77,5 @@ https://www.linkedin.com/posts/akshaymarch7_css-flexbox-ugcPost-6758996799324737
 2) Code input user then show working with animation
 3) Fantastic UI/UX Desgining
 
-## Contributors
-
-- [Shivam](https://github.com/shivam7374)
-- [Umair Ayub](https://github.com/umairayub79)
-- [Pooja Sharma](https://github.com/poojasharma097)
-
 
 ## Thank you :smiley:
