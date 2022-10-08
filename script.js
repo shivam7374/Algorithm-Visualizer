@@ -8,6 +8,12 @@ var i = 0,
   m = 0;
 var start, end; //for recording the time
 var globinterval;
+//reset to initial by localstorage
+function reset(){
+  document.getElementById("array").innerHTML= localStorage.getItem("oldArr").trim();
+  document.getElementById('reset').disabled = true;
+  document.getElementById('reset').style.backgroundColor = "grey";
+}
 
 function random_array_generator() {
   array_generated.innerHTML = "";
@@ -23,6 +29,7 @@ function random_array_generator() {
   }
   i = 0;
   j = 0;
+  localStorage.setItem("oldArr", array_generated.innerHTML);
 }
 
 function array_generator_random() {
@@ -40,6 +47,7 @@ function array_generator_random() {
   }
   i = 0;
   j = 0;
+  localStorage.setItem("oldArr",array_generated.innerHTML);
 }
 
 function array_generator_elements() {
@@ -59,6 +67,7 @@ function array_generator_elements() {
   }
   i = 0;
   j = 0;
+  localStorage.setItem("oldArr", array_generated.innerHTML);
 }
 function randomIntFromInterval(min, max) {
   // min and max included

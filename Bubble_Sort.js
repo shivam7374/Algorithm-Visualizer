@@ -36,6 +36,8 @@ function bubbleSort() {
     document.getElementById('insertion').style.backgroundColor = "green";
     document.getElementById('selection').disabled = false;
     document.getElementById('selection').style.backgroundColor = "green";
+    document.getElementById('reset').disabled = false;
+    document.getElementById('reset').style.backgroundColor = "green";
     console.log(`Execution time: ${end - start} ms`);
     // console.log("BOSS");
     clearInterval(globinterval);
@@ -54,6 +56,8 @@ function bubble_sortonclick() {
   document.getElementById('insertion').style.backgroundColor = "grey";
   document.getElementById('selection').disabled = true;
   document.getElementById('selection').style.backgroundColor = "grey";
+  document.getElementById('reset').disabled = true;
+  document.getElementById('reset').style.backgroundColor = "grey";
 
   start = window.performance.now();
   (i = 0), (j = 0);  // 
