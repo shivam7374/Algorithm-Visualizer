@@ -79,28 +79,20 @@ function mergeSort() {
     }
     if (m >= n) {
         end = window.performance.now();
-        document.getElementById('bubble').disabled = false;
-        document.getElementById('bubble').style.backgroundColor = "green";
-        document.getElementById('merge').disabled = false;
-        document.getElementById('merge').style.backgroundColor = "green";
-        document.getElementById('insertion').disabled = false;
-        document.getElementById('insertion').style.backgroundColor = "green";
-        document.getElementById('selection').disabled = false;
-        document.getElementById('selection').style.backgroundColor = "green";
+        document.querySelectorAll('button').forEach((btn) => {
+            btn.disabled = false;
+            btn.style.backgroundColor = "green";
+        });
         console.log(`Execution time: ${end - start} ms`);
         clearInterval(globinterval);
     }
 }
 
 function merge_sortonclick() {
-    document.getElementById('bubble').disabled = true;
-    document.getElementById('bubble').style.backgroundColor = "grey";
-    document.getElementById('merge').disabled = true;
-    document.getElementById('merge').style.backgroundColor = "grey";
-    document.getElementById('insertion').disabled = true;
-    document.getElementById('insertion').style.backgroundColor = "grey";
-    document.getElementById('selection').disabled = true;
-    document.getElementById('selection').style.backgroundColor = "grey";
+    document.querySelectorAll('button').forEach((btn) => {
+        btn.disabled = true;
+        btn.style.backgroundColor = "grey";
+    });
     start = window.performance.now();
     i = 0, m = 1;
     var elements = document.getElementById('array').children;
