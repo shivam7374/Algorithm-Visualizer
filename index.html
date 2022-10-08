@@ -1,65 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <center>
-      <h1>ALGORITHM VISUALIZER</h1>
-    </center>
-    <div class="input_container">
-      <h4>Generate The Array</h4>
-      <div class="makecol">
-        <div>
-          <label for="arraySizeInput">random array of given length</label>
-          <input
-            type="number"
-            name="arraySizeInput"
-            id="arraySizeInput"
-            placeholder="Array Size"
-          />
-          <button id="array_generator" onclick="array_generator_random()">
-            Generate Array
-          </button>
-        </div>
 
-        <div>
-          <label for="arrvalues">array of entered values</label>
-          <input
-            placeholder="give space btw numbers"
-            type="text"
-            id="arrvalues"
-          />
-          <button id="array_generator" onclick="array_generator_elements()">
-            Generate Array
-          </button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-        <div>
-          <label for="random_array">random array of random length</label>
-          <br />
-          <button id="random_array" onclick="random_array_generator()">
-            Generate Array
-          </button>
-        </div>
-      </div>
-      <h4>Select sorting algorithm for visualization</h4>
+<body>
+  <center>
+    <h1>ALGORITHM VISUALIZER</h1>
+  </center>
+  <div class="input_container">
+    <h4>Generate The Array</h4>
+    <div class="makecol">
       <div>
-        <button onclick="bubble_sortonclick()">Bubble Sort</button>
-        <button onclick="insertion_sortonclick()">Insertion Sort</button>
-        <button onclick="selection_sortonclick()">Selection Sort</button>
-        <button onclick="merge_sortonclick()">Merge Sort</button>
+        <label for="arraySizeInput">random array of given length</label>
+        <input type="number" name="arraySizeInput" id="arraySizeInput" placeholder="Array Size" />
+        <button id="array_generator" onclick="array_generator_random()">
+          Generate Array
+        </button>
+      </div>
+
+      <div>
+        <label for="arrvalues">array of entered values</label>
+        <input placeholder="give space btw numbers" type="text" id="arrvalues" />
+        <button id="array_generator" onclick="array_generator_elements()">
+          Generate Array
+        </button>
+      </div>
+
+      <div>
+        <label for="random_array">random array of random length</label>
+        <br />
+        <button id="random_array" onclick="random_array_generator()">
+          Generate Array
+        </button>
       </div>
     </div>
+    <h4>Select sorting algorithm for visualization</h4>
+    <div>
+      <button onclick="bubble_sortonclick()" id="bubble">Bubble Sort</button>
+      <button onclick="insertion_sortonclick()" id="insertion">Insertion Sort</button>
+      <button onclick="selection_sortonclick()" id="selection">Selection Sort</button>
+      <button onclick="merge_sortonclick()" id="merge">Merge Sort</button>
+    </div>
+  </div>
 
-    <center><div id="array"></div></center>
-  </body>
-  <script src="script.js"></script>
-  <script src="Bubble_Sort.js"></script>
-  <script src="Insertion_Sort.js"></script>
-  <script src="Selection_Sort.js"></script>
-  <script src="Merge_Sort.js"></script>
+  <center>
+    <div id="array"></div>
+  </center>
+</body>
+<script src="script.js"></script>
+<script src="Bubble_Sort.js"></script>
+<script src="Insertion_Sort.js"></script>
+<script src="Selection_Sort.js"></script>
+<script src="Merge_Sort.js"></script>
+
 </html>
