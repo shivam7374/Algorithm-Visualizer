@@ -23,6 +23,7 @@ function random_array_generator() {
   }
   i = 0;
   j = 0;
+  changeWidth();
 }
 
 function array_generator_random() {
@@ -40,6 +41,7 @@ function array_generator_random() {
   }
   i = 0;
   j = 0;
+  changeWidth();
 }
 
 function array_generator_elements() {
@@ -59,8 +61,22 @@ function array_generator_elements() {
   }
   i = 0;
   j = 0;
+  changeWidth();
 }
+
 function randomIntFromInterval(min, max) {
   // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+/*
+* function that alters the width of the bars
+*/
+function changeWidth(){
+  let slider = document.querySelector('[type=range]');
+  let div = document.querySelectorAll('.bar_view');
+
+  for (index = 0 ; index < div.length; index++) {
+    div[index].style.width = slider.value + 'px';
+  }
 }
