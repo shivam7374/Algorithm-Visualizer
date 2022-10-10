@@ -28,6 +28,10 @@ function bubbleSort() {
     var elements = document.getElementById("array").children;
     elements[0].style.backgroundColor = "blueviolet";
     end = window.performance.now();
+    document.querySelectorAll("button").forEach((btn) => {
+      btn.disabled = false;
+      btn.style.backgroundColor = "green";
+    });
     document.getElementById('bubble').disabled = false;
     document.getElementById('bubble').style.backgroundColor = "green";
     document.getElementById('merge').disabled = false;
@@ -48,6 +52,10 @@ function bubbleSort() {
 }
 
 function bubble_sortonclick() {
+  document.querySelectorAll("button").forEach((btn) => {
+    btn.disabled = true;
+    btn.style.backgroundColor = "grey";
+  });
   document.getElementById('bubble').disabled = true;
   document.getElementById('bubble').style.backgroundColor = "grey";
   document.getElementById('merge').disabled = true;
@@ -66,9 +74,4 @@ function bubble_sortonclick() {
   globinterval = startinterval;
   console.log("startinterval", startinterval);
   console.log("globinterval", globinterval);
-
-  if(len!==0)
-  {
-    
-  }
 }

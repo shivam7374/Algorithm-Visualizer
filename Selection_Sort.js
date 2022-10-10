@@ -31,6 +31,10 @@ function selectionSort() {
     var elements = document.getElementById("array").children;
     elements[n - 1].style.backgroundColor = "blueviolet";
     end = window.performance.now();
+    document.querySelectorAll("button").forEach((btn) => {
+      btn.disabled = false;
+      btn.style.backgroundColor = "green";
+    });
     document.getElementById('bubble').disabled = false;
     document.getElementById('bubble').style.backgroundColor = "green";
     document.getElementById('merge').disabled = false;
@@ -47,6 +51,10 @@ function selectionSort() {
 }
 
 function selection_sortonclick() {
+  document.querySelectorAll("button").forEach((btn) => {
+    btn.disabled = true;
+    btn.style.backgroundColor = "grey";
+  });
   document.getElementById('bubble').disabled = true;
   document.getElementById('bubble').style.backgroundColor = "grey";
   document.getElementById('merge').disabled = true;

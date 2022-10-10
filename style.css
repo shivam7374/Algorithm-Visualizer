@@ -15,7 +15,6 @@ body {
 }
 .bar_view {
   width: 3px;
-  /* height: 50px; */
   background-color: blueviolet;
   align-items: flex-end;
   display: inline-block;
