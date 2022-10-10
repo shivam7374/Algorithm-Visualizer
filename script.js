@@ -10,6 +10,10 @@ var start, end; //for recording the time
 var globinterval;
 //reset to initial by localstorage
 function reset(){
+    document.querySelectorAll(".disable").forEach((btn) => {
+      btn.disabled = false;
+      btn.style.backgroundColor = "green";
+    });
   document.getElementById("array").innerHTML= localStorage.getItem("oldArr").trim();
   document.getElementById('reset').disabled = true;
   document.getElementById('reset').style.backgroundColor = "grey";
@@ -78,16 +82,17 @@ function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function stop(){
+function stopButton(){
     clearInterval(globinterval);
-    document.getElementById('bubble').disabled = false;
-    document.getElementById('bubble').style.backgroundColor = "green";
-    document.getElementById('merge').disabled = false;
-    document.getElementById('merge').style.backgroundColor = "green";
-    document.getElementById('insertion').disabled = false;
-    document.getElementById('insertion').style.backgroundColor = "green";
-    document.getElementById('selection').disabled = false;
-    document.getElementById('selection').style.backgroundColor = "green";
+
+    document.querySelectorAll(".disable").forEach((btn) => {
+      btn.disabled = false;
+      btn.style.backgroundColor = "green";
+    });
+    document.getElementById('reset').disabled = false;
+    document.getElementById('reset').style.backgroundColor = "green";
+    document.getElementById('stop').disabled = true;
+    document.getElementById('stop').style.backgroundColor = "grey";
 
 }
 
