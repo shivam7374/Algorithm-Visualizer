@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Algorithm Visualizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -39,6 +42,11 @@
         </button>
       </div>
     </div>
+    <center>
+      <button id="reset" onclick="reset()" disabled="true" style="background-color:grey ;">
+        Reset
+      </button>
+    </center>
     <h4>Select sorting algorithm for visualization</h4>
     <div>
       <button onclick="bubble_sortonclick()" id="bubble">Bubble Sort</button>
@@ -52,6 +60,8 @@
   <center>
     <div id="array"></div>
   </center>
+  <h4>Select the width of the bars</h4>
+  <input type='range' min="3" max="50" value="3" oninput="changeWidth()">
 </body>
 <script src="script.js"></script>
 <script src="Bubble_Sort.js"></script>
