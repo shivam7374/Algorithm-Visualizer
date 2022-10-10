@@ -8,7 +8,7 @@ var i = 0,
   m = 0;
 var start, end; //for recording the time
 var globinterval;
-var pauseBool=false;
+
 function random_array_generator() {
   array_generated.innerHTML = "";
   let n = randomIntFromInterval(10, 100);
