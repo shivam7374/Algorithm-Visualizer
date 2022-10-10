@@ -56,7 +56,7 @@ function bubble_sortonclick() {
   document.getElementById('selection').style.backgroundColor = "grey";
 
   start = window.performance.now();
-  (i = 0), (j = 0);  // 
+  (i = 0), (j = 0);  //
   var startinterval = setInterval(bubbleSort, 1000);
   console.log(len);
   globinterval = startinterval;
@@ -65,6 +65,6 @@ function bubble_sortonclick() {
 
   if(len!==0)
   {
-    
+
   }
 }

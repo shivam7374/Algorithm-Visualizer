@@ -8,7 +8,7 @@ var i = 0,
   m = 0;
 var start, end; //for recording the time
 var globinterval;
-
+var pauseBool=false;
 function random_array_generator() {
   array_generated.innerHTML = "";
   let n = randomIntFromInterval(10, 100);
@@ -64,3 +64,17 @@ function randomIntFromInterval(min, max) {
   // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+function stop(){
+    clearInterval(globinterval);
+    document.getElementById('bubble').disabled = false;
+    document.getElementById('bubble').style.backgroundColor = "green";
+    document.getElementById('merge').disabled = false;
+    document.getElementById('merge').style.backgroundColor = "green";
+    document.getElementById('insertion').disabled = false;
+    document.getElementById('insertion').style.backgroundColor = "green";
+    document.getElementById('selection').disabled = false;
+    document.getElementById('selection').style.backgroundColor = "green";
+
+}
+
