@@ -24,6 +24,17 @@ function insertionSort() {
         btn.style.backgroundColor = "green";
       });
 
+
+      document.getElementById('bubble').disabled = false;
+      document.getElementById('bubble').style.backgroundColor = "green";
+      document.getElementById('merge').disabled = false;
+      document.getElementById('merge').style.backgroundColor = "green";
+      document.getElementById('insertion').disabled = false;
+      document.getElementById('insertion').style.backgroundColor = "green";
+      document.getElementById('selection').disabled = false;
+      document.getElementById('selection').style.backgroundColor = "green";
+      document.getElementById('reset').disabled = false;
+      document.getElementById('reset').style.backgroundColor = "green";
       console.log(`Execution time: ${end - start} ms`);
       clearInterval(globinterval);
     } else {
@@ -40,6 +51,16 @@ function insertion_sortonclick() {
     btn.disabled = true;
     btn.style.backgroundColor = "grey";
   });
+  document.getElementById('bubble').disabled = true;
+  document.getElementById('bubble').style.backgroundColor = "grey";
+  document.getElementById('merge').disabled = true;
+  document.getElementById('merge').style.backgroundColor = "grey";
+  document.getElementById('insertion').disabled = true;
+  document.getElementById('insertion').style.backgroundColor = "grey";
+  document.getElementById('selection').disabled = true;
+  document.getElementById('selection').style.backgroundColor = "grey";
+  document.getElementById('reset').disabled = true;
+  document.getElementById('reset').style.backgroundColor = "grey";
   start = window.performance.now();
   (i = 1), (j = 0);
   var elements = document.getElementById("array").children;
