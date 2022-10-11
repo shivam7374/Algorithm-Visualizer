@@ -21,7 +21,7 @@
       <div>
         <label for="arraySizeInput">random array of given length</label>
         <input type="number" name="arraySizeInput" id="arraySizeInput" placeholder="Array Size" />
-        <button id="array_generator" onclick="array_generator_random()">
+        <button id="array_generator" onclick="array_generator_random()" class="disable">
           Generate Array
         </button>
       </div>
@@ -29,7 +29,7 @@
       <div>
         <label for="arrvalues">array of entered values</label>
         <input placeholder="give space btw numbers" type="text" id="arrvalues" />
-        <button id="array_generator" onclick="array_generator_elements()">
+        <button id="array_generator" onclick="array_generator_elements()"class="disable">
           Generate Array
         </button>
       </div>
@@ -37,22 +37,23 @@
       <div>
         <label for="random_array">random array of random length</label>
         <br />
-        <button id="random_array" onclick="random_array_generator()">
+        <button id="random_array" onclick="random_array_generator()"class="disable">
           Generate Array
         </button>
       </div>
     </div>
     <center>
-      <button id="reset" onclick="reset()" disabled="true" style="background-color:grey ;">
+      <button id="reset" onclick="reset()" disabled="true" style="background-color:grey;">
         Reset
       </button>
+      <button id = "stop" onclick="stopButton()"disabled="true"style="background-color:grey;">Stop</button>
     </center>
     <h4>Select sorting algorithm for visualization</h4>
     <div>
-      <button onclick="bubble_sortonclick()" id="bubble">Bubble Sort</button>
-      <button onclick="insertion_sortonclick()" id="insertion">Insertion Sort</button>
-      <button onclick="selection_sortonclick()" id="selection">Selection Sort</button>
-      <button onclick="merge_sortonclick()" id="merge">Merge Sort</button>
+      <button onclick="bubble_sortonclick()" id="bubble" class="sort disable">Bubble Sort</button>
+      <button onclick="insertion_sortonclick()" id="insertion"class="sort disable">Insertion Sort</button>
+      <button onclick="selection_sortonclick()" id="selection"class="sort disable">Selection Sort</button>
+      <button onclick="merge_sortonclick()" id="merge"class="sort disable">Merge Sort</button>
     </div>
   </div>
 

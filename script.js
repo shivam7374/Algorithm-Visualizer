@@ -10,6 +10,10 @@ var start, end; //for recording the time
 var globinterval;
 //reset to initial by localstorage
 function reset(){
+    document.querySelectorAll(".disable").forEach((btn) => {
+      btn.disabled = false;
+      btn.style.backgroundColor = "green";
+    });
   document.getElementById("array").innerHTML= localStorage.getItem("oldArr").trim();
   document.getElementById('reset').disabled = true;
   document.getElementById('reset').style.backgroundColor = "grey";
@@ -76,6 +80,20 @@ function array_generator_elements() {
 function randomIntFromInterval(min, max) {
   // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function stopButton(){
+    clearInterval(globinterval);
+
+    document.querySelectorAll(".disable").forEach((btn) => {
+      btn.disabled = false;
+      btn.style.backgroundColor = "green";
+    });
+    document.getElementById('reset').disabled = false;
+    document.getElementById('reset').style.backgroundColor = "green";
+    document.getElementById('stop').disabled = true;
+    document.getElementById('stop').style.backgroundColor = "grey";
+
 }
 
 /*
