@@ -16,26 +16,29 @@
     <h1>ALGORITHM VISUALIZER</h1>
   </center>
   <div class="input_container">
-    <h4>Generate The Array</h4>
+    <h3>Generate The Array from any of the following methods</h3>
     <div class="makecol">
       <div>
-        <label for="arraySizeInput">random array of given length</label>
-        <input type="number" name="arraySizeInput" id="arraySizeInput" placeholder="Array Size" />
+        <label><b>Method 1</b></label>
+        <label for="arraySizeInput">Random array of given length</label>
+        <input type="number" name="arraySizeInput" id="arraySizeInput" placeholder="Enter Array Size" />
         <button id="array_generator" onclick="array_generator_random()" class="disable">
           Generate Array
         </button>
       </div>
 
       <div>
-        <label for="arrvalues">array of entered values</label>
-        <input placeholder="give space btw numbers" type="text" id="arrvalues" />
+        <label><b>Method 2</b></label>
+        <label for="arrvalues">Array with the given values</label>
+        <input placeholder="Enter space separated numbers" type="text" id="arrvalues" />
         <button id="array_generator" onclick="array_generator_elements()"class="disable">
           Generate Array
         </button>
       </div>
 
       <div>
-        <label for="random_array">random array of random length</label>
+        <label><b>Method 3</b></label>
+        <label for="random_array">Random generated Array</label>
         <br />
         <button id="random_array" onclick="random_array_generator()"class="disable">
           Generate Array
@@ -48,7 +51,9 @@
       </button>
       <button id = "stop" onclick="stopButton()"disabled="true"style="background-color:grey;">Stop</button>
     </center>
-    <h4>Select sorting algorithm for visualization</h4>
+
+    <h3>Select the Sorting algorithm for visualization</h3>
+
     <div>
       <button onclick="bubble_sortonclick()" id="bubble" class="sort disable">Bubble Sort</button>
       <button onclick="insertion_sortonclick()" id="insertion"class="sort disable">Insertion Sort</button>
@@ -63,6 +68,7 @@
   <h4>Select the width of the bars</h4>
   <input type='range' min="3" max="50" value="3" oninput="changeWidth()">
 </body>
+
 <script src="script.js"></script>
 <script src="Bubble_Sort.js"></script>
 <script src="Insertion_Sort.js"></script>
