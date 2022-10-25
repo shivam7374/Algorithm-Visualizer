@@ -21,7 +21,7 @@ This is a algorithm visualizer which is made with the purpose to help understand
 - Javascript
 
 <p align="center" width="100%">
-    <img width="66%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWTiKSB4cB53qrrKUq9P31xsER2sUnUICFA&usqp=CAU">
+    <img width="50%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWTiKSB4cB53qrrKUq9P31xsER2sUnUICFA&usqp=CAU">
 </p>
 
 <h2 align="center"> Algorithms </h2>
@@ -40,7 +40,7 @@ If you want to contribute to the project, you can follow the steps given below:
 
 3. Clone the forked repository. Go to your GitHub account, open the forked repository, click on the code button and then click the copy to clipboard icon.Open a terminal and run the following command:
 
-```bash
+```
 git clone "url you just copied"
 ```
 
@@ -48,33 +48,27 @@ where "url you just copied" (without the quotation marks) is the url to this rep
 
 4. Change the repository directory
 
-```bash
+```
 cd algorithm-visualizer
 ```
 
 5. Create a branch
 
-```bash
+```
 git switch -c your-new-branch-name
 ```
 
 6. Make all the necessary changes to the project and follow the given commands.
 
-```bash
+```
 git status
-```
-
-```bash
 git add .
-```
-
-```bash
 git commit -m "Add a message"
 ```
 
 7. Push the changes to github.
 
-```bash
+```
 git push origin -u your-branch-name
 ```
 
@@ -84,8 +78,7 @@ git push origin -u your-branch-name
 
 <h2 align="center"> Future Aspects </h2>
 
-- CSS Flexbox animations like
-  https://www.linkedin.com/posts/akshaymarch7_css-flexbox-ugcPost-6758996799324737536-48XR
+- CSS Flexbox animations like done [here](https://www.linkedin.com/posts/akshaymarch7_css-flexbox-ugcPost-6758996799324737536-48XR)
 
 - Code input user then show working with animation
 - Fantastic UI/UX Desgining
