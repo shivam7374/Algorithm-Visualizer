@@ -11,11 +11,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: mistyrose;
+  background-color: lightblue;
 }
 .bar_view {
   width: 3px;
-  background-color: blueviolet;
+  background-color: red;
   align-items: flex-end;
   display: inline-block;
   margin: 2px;
@@ -52,6 +52,6 @@ input {
 }
 button {
   margin: 5px;
-  background-color: green;
+  background-color: purple;
   color: white;
 }
